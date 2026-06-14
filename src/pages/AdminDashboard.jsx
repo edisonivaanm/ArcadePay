@@ -209,7 +209,7 @@ function RechargeModal({ user, adminRef, onClose }) {
     e.preventDefault();
     const monto = parseInt(amount, 10);
     if (!monto || monto <= 0) { setError('Ingresa un monto válido mayor a 0.'); return; }
-    if (monto > 1000) { setError('El monto máximo por recarga es 1000 créditos.'); return; }
+    if (monto > 100) { setError('El monto máximo por recarga es 100 créditos.'); return; }
 
     setLoading(true);
     setError('');
@@ -269,7 +269,7 @@ function RechargeModal({ user, adminRef, onClose }) {
               placeholder="Ej: 10"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              min="1" max="1000" required autoFocus
+              min="1" max="100" required autoFocus
             />
           </div>
 
@@ -304,9 +304,9 @@ function RechargeModal({ user, adminRef, onClose }) {
 function QRScanIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
-      <rect x="7" y="7" width="3" height="3" rx="0.5"/><rect x="14" y="7" width="3" height="3" rx="0.5"/>
-      <rect x="7" y="14" width="3" height="3" rx="0.5"/><path d="M14 14h.01M17 14h.01M14 17h.01M17 17h.01"/>
+      <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2" />
+      <rect x="7" y="7" width="3" height="3" rx="0.5" /><rect x="14" y="7" width="3" height="3" rx="0.5" />
+      <rect x="7" y="14" width="3" height="3" rx="0.5" /><path d="M14 14h.01M17 14h.01M14 17h.01M17 17h.01" />
     </svg>
   );
 }
