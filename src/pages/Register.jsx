@@ -186,7 +186,7 @@ export default function Register() {
             <label className="form-label" htmlFor="reg-email">Correo electrónico</label>
             <input
               id="reg-email" name="email" type="email" className="form-input"
-              placeholder="tu@correo.com" value={form.email} onChange={handleChange}
+              placeholder="correo@example.com" value={form.email} onChange={handleChange}
               required autoComplete="email"
             />
           </div>
